@@ -4,7 +4,7 @@ pipeline{
     stage('Maven install') {
       steps {
         withMaven(jdk: 'LocalJDK8',maven: 'LocalMaven') {
-          bat "mvn clean package"
+          sh "mvn clean package"
 }
     }
   }
