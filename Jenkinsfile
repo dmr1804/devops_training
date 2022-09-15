@@ -3,7 +3,7 @@ pipeline{
   stages {
     stage('Maven install') {
       steps {
-        withMaven(globalMavenSettingsConfig: 'null', jdk: 'LocalJDK8', maven: 'LocalMaven', mavenSettingsConfig: 'null') {
+        withMaven( jdk: 'LocalJDK8', maven: 'LocalMaven') {
           sh 'mvn clean install'
 }
     }
